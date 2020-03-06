@@ -1,0 +1,16 @@
+{% extends 'employerR/base.html' %} 
+{% load crispy_forms_tags %}
+{% block content %}
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet reprehenderit, sint pariatur odit, dolore consequuntur eligendi atque corrupti inventore beatae, doloribus provident quisquam repellendus incidunt! Cupiditate cum mollitia necessitatibus soluta!</p>
+    <form action="" method="post" autocomplete="off">
+    {% csrf_token %}
+    {{ form.fullname|as_crispy_field }}
+    {{ form.mobile|as_crispy_field }}
+    <div class="row">
+        <div class="col-md-4">  {{ form.pmp_code|as_crispy_field }}</div>
+        <div class="col-md-8">  {{ form.position|as_crispy_field }}</div>
+    </div>
+    <button type="submit" class="btn btn-success"><i class="fas fa-database"></i>submit</button>
+    </form>
+
+{% endblock %} 
